@@ -323,7 +323,9 @@ O APK será gerado em `app/build/outputs/apk/release/`.
 | **André Pereira Justiniano** | Co-autoria |
 | **Gustavo Ribeiro Gomes** | Co-autoria |
 
-## Orientadora: Profa. Gabrielly Queiróz Pereira | Departamento de Informática 
+## Orientadora: Profª Gabrielly Queiróz Pereira | Departamento de Informática 
+
+---
 
 ## 📚 Referências Principais
 
