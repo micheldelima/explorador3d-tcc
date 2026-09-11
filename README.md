@@ -325,11 +325,10 @@ O APK será gerado em `app/build/outputs/apk/release/`.
 
 <p align="center">
 **Orientadora:** Profa. Gabrielly Queiróz Pereira<br>
-**Instituição:** Universidade Estadual de Ponta Grossa (UEPG) — Departamento de Informática<br>
+**Instituição:** Universidade Estadual de Ponta Grossa (UEPG) | Departamento de Informática<br>
 **Curso:** Bacharelado em Engenharia de Software<br>
 **Ano:** 2026<br>
 </p>
----
 
 ## 📚 Referências Principais
 
