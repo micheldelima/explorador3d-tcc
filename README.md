@@ -323,11 +323,12 @@ O APK será gerado em `app/build/outputs/apk/release/`.
 | **André Pereira Justiniano** | Co-autoria |
 | **Gustavo Ribeiro Gomes** | Co-autoria |
 
-**Orientadora:** Profa. Gabrielly Queiróz Pereira
-**Instituição:** Universidade Estadual de Ponta Grossa (UEPG) — Departamento de Informática
-**Curso:** Bacharelado em Engenharia de Software
-**Ano:** 2026
-
+<p align="center">
+**Orientadora:** Profa. Gabrielly Queiróz Pereira<br>
+**Instituição:** Universidade Estadual de Ponta Grossa (UEPG) — Departamento de Informática<br>
+**Curso:** Bacharelado em Engenharia de Software<br>
+**Ano:** 2026<br>
+</p>
 ---
 
 ## 📚 Referências Principais
