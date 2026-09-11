@@ -36,7 +36,6 @@ Desenvolver uma proposta de ensino da língua inglesa para crianças do ensino f
 ### Objetivos Específicos
 - Investigar o uso da RA no contexto educacional, com foco no ensino de língua inglesa;
 - Identificar limitações dos métodos tradicionais e possibilidades de integração com tecnologias digitais;
-- Desenvolver objetos tridimensionais no **Blender** para representação de vocabulário em inglês;
 - Implementar um aplicativo mobile no Android Studio capaz de reconhecer marcadores visuais HIRO;
 - Integrar recursos de áudio (TTS) associando pronúncia aos objetos;
 - Avaliar o potencial da solução em termos de engajamento e apoio à aprendizagem.
@@ -84,7 +83,6 @@ Desenvolver uma proposta de ensino da língua inglesa para crianças do ensino f
 |---------|-----|
 | **MyMemory Translation API** | Tradução automática EN → PT-BR |
 | **Sketchfab** | Repositório de modelos 3D livres (formato GLB) |
-| **Blender** | Ajuste e exportação de modelos 3D |
 
 ---
 
@@ -272,32 +270,6 @@ O APK será gerado em `app/build/outputs/apk/release/`.
 | Pressionar **Próximo** | Troca o modelo (avião → livro → carro → ...) |
 | Tela **Configurações** | Ajusta idioma (PT/EN), som e tamanho da fonte |
 | Tela **Sobre** | Informações do projeto |
-
----
-
-## 📊 Avaliação
-
-O projeto foi avaliado por **8 participantes anônimos** (majoritariamente estudantes, 8–25 anos).
-
-| Critério | Resultado |
-|----------|-----------|
-| 🧊 Renderização de modelos 3D | ⭐ 100% de aprovação total |
-| 🎨 Interface intuitiva | 87,5% concordaram |
-| 📚 Eficácia pedagógica percebida | 87,5% concordaram |
-| ⚙️ Painel de configurações | 75% concordaram |
-| 🔊 Qualidade do áudio (TTS) | 75% concordaram — **ponto de melhoria futura** |
-
-**Conclusão da avaliação:** o app cumpre seu objetivo de forma estável e é percebido como eficaz para o ensino de inglês, com oportunidade de melhoria na clareza/volume do áudio.
-
----
-
-## 🚀 Trabalhos Futuros
-
-- Explorar bibliotecas para habilidades linguísticas mais complexas (produção oral e escrita)
-- Ampliar a base de modelos 3D para maior diversidade temática
-- Melhorar a qualidade e clareza do áudio TTS
-- Aplicar a mesma arquitetura ao ensino de outros idiomas (francês, espanhol, mandarim, alemão)
-- Testes em ambiente escolar com turmas maiores
 
 ---
 
