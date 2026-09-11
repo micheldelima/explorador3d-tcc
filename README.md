@@ -106,9 +106,51 @@ O projeto adota uma **arquitetura híbrida**, dividida em duas camadas que inter
 └─────────────────────────────────────────────┘
 ```
 
-### Por que arquitetura híbrida?
+### Por que arquitetura híbrida? (Decisão técnica e limitações de hardware)
 
-Não existe SDK nativo para Kotlin/Android que suporte marcadores fiduciais HIRO. Bibliotecas como o **ARCore (Google)** não implementam marcadores no estilo ARToolKit. A solução adotada foi encapsular **A-Frame + AR.js** em um **WebView** configurado como **contexto seguro HTTPS** (via `WebViewAssetLoader`), permitindo o acesso à câmera.
+A escolha por marcadores fiduciais HIRO em vez de RA sem marcador (markerless, via ARCore) não foi apenas uma preferência de design — ela foi **motivada por limitações reais de hardware** do dispositivo-alvo do projeto.
+
+#### 1. Ausência de SDK nativo para marcadores HIRO
+
+Não existe SDK nativo para Kotlin/Android que suporte marcadores fiduciais do tipo **HIRO/ARToolKit**. Bibliotecas como o **ARCore (Google)** implementam apenas RA *markerless* (baseada em planos, pontos de referência e profundidade), **não suportando marcadores no estilo ARToolKit**. Por isso, a única forma viável de usar HIRO no Android é encapsular **A-Frame + AR.js** em um **WebView** configurado como **contexto seguro HTTPS** (via `WebViewAssetLoader`), permitindo o acesso à câmera.
+
+#### 2. Incompatibilidade do ARCore com o hardware de teste
+
+O desenvolvimento e os testes do Explorador 3D foram realizados em um **Motorola Moto E Plus com Android 9 (Pie)**. Apesar do sistema operacional atender com folga o requisito mínimo de software do ARCore (**Android 7.0 / API 24 ou superior**), o dispositivo **não é compatível com o ARCore** por não constar na **Lista Oficial de Dispositivos Suportados** do Google.
+
+**O motivo é a certificação individual por modelo de aparelho.** Para funcionar com ARCore, o fabricante precisa submeter o dispositivo a um processo de certificação junto ao Google, que verifica:
+
+- 📷 **Qualidade da câmera** (resolução, foco, taxa de captura)
+- 🎯 **Sensores de movimento altamente calibrados** (acelerômetro, giroscópio)
+- 🧠 **CPU/SoC** com capacidade de processamento em tempo real
+- 🏗️ **Arquitetura de hardware** integrada
+
+A linha **Moto E** é focada em custo-benefício e **não passou por essa certificação**. Consequentemente, a Google Play Store **oculta** o app *"Google Play Services para RA"* nesses dispositivos — tornando impossível executar qualquer aplicação baseada em ARCore neles.
+
+> 📌 *Nota técnica:* No Android 9 do Moto E Plus, o ARCore nem sequer é oferecido pela Play Store. Essa limitação inviabilizou completamente a abordagem *markerless* no dispositivo de desenvolvimento.
+
+#### 3. Por que a solução híbrida resolve esse problema?
+
+Ao optar por **marcadores HIRO + AR.js**, o Explorador 3D contorna todas essas limitações:
+
+| Requisito | ARCore (markerless) | Explorador 3D (HIRO + AR.js) |
+|-----------|---------------------|-------------------------------|
+| Certificação Google do aparelho | ❌ Obrigatória | ✅ Não necessária |
+| Hardware específico | ❌ Câmera + sensores calibrados | ✅ Câmera comum com foco razoável |
+| Versão mínima do Android | Android 7.0+ | Android 7.0+ (mesma) |
+| Dependência de serviços Google | ❌ Google Play Services para RA | ✅ Nenhuma |
+| Funciona em aparelhos populares | ❌ Limitado à lista certificada | ✅ Qualquer Android com câmera |
+| Funciona offline | ⚠️ Precisa baixar dados de perfil | ✅ Tudo embarcado no APK |
+
+**Conclusão:** a arquitetura híbrida com marcadores HIRO foi a única solução **democrática e acessível** capaz de funcionar no dispositivo-alvo (Moto E Plus / Android 9) e em milhões de outros aparelhos populares que não possuem certificação ARCore. Isso está **alinhado com o objetivo do TCC** de democratizar o acesso à RA no ensino público brasileiro, onde predominam dispositivos de entrada e intermediários.
+
+#### 📚 Referências técnicas
+
+- [Dispositivos com suporte ao ARCore — Google for Developers](https://developers.google.com/ar/devices?hl=pt-br)
+- [Ativar RA no seu app Android (ARCore) — Google for Developers](https://developers.google.com/ar/develop/java/enable-arcore?hl=pt-br)
+- [Google ARCore 1.0: realidade aumentada — Tecnoblog](https://tecnoblog.net/noticias/google-arcore-1-0-realidade-aumentada/)
+- [Lista de smartphones compatíveis com ARCore — Oficina da Net](https://www.oficinadanet.com.br/google/33042-ar-core-google-atualiza-lista-de-smartphone-compativeis)
+- [Especificações do Moto E6 Plus — Motorola Support](https://en-us.support.motorola.com/app/answers/detail/a_id/142905/~/specifications--moto-e6-plus)
 
 ---
 
