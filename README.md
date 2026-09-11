@@ -7,9 +7,9 @@ Trabalho de Conclusão de Curso (TCC) apresentado como requisito parcial para ob
 <p align="center">
   <img src="docs/img/tela-inicial.jpeg" alt="Tela Inicial do Explorador 3D" width="100"/>
   <img src="docs/img/tela-config.jpeg" alt="Tela de Configurações" width="100"/>
-  <img src="docs/img/ex_1.jpeg" alt="Tela de Configurações" width="100"/>
-  <img src="docs/img/ex_2.jpeg" alt="Tela de Configurações" width="100"/>
-  <img src="docs/img/ex_3.jpeg" alt="Tela de Configurações" width="100"/>
+  <img src="docs/img/exemplo-1.jpeg" alt="Tela de Configurações" width="100"/>
+  <img src="docs/img/exemplo-2.jpeg" alt="Tela de Configurações" width="100"/>
+  <img src="docs/img/exemplo-3.jpeg" alt="Tela de Configurações" width="100"/>
 </p>
 
 ---
