@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SobreActivity">
+
+    <!-- Fundo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_ar_tecnologia"
+        android:alpha="0.25" />
+
+    <!-- Card principal -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#CC000000">
+
+        <!-- ScrollView para permitir rolagem quando o conteúdo é grande -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Título -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sobre o Aplicativo"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Descrição principal -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="O Explorador 3D é um aplicativo educacional de realidade aumentada desenvolvido para tornar o aprendizado do idioma inglês mais interativo e envolvente. Ele utiliza marcadores físicos (Hiro) para exibir modelos 3D, imagens e vídeos de forma dinâmica, permitindo que os alunos explorem conteúdos de maneira imersiva."
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Créditos -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCreditos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desenvolvido por Michel de Lima - 4º ano - Engenharia de Software"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtUniversidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Universidade Estadual de Ponta Grossa (UEPG)"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:alpha="0.9"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Versão -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtVersao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Versão 1.1 — 2026"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExploracaoActivity">
+
+    <!-- Fundo da tela -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_ar_tecnologia"
+        android:contentDescription="@string/bg_description" />
+
+    <!-- Camada de contraste -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <!-- Conteúdo principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTituloExploracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explorador 3D"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:shadowColor="#AA000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+        <!-- Botão: Modelos 3D -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnModelos"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="monospace"
+            android:text="Modelos 3D"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_dialog_dialer"
+            app:iconTint="@color/azul"
+            app:iconGravity="textStart"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/azul"
+            app:strokeWidth="2dp" />
+
+        <!-- Botão: Imagens -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImagens"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="monospace"
+            android:text="Imagens 2D"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_menu_gallery"
+            app:iconTint="@color/laranja"
+            app:iconGravity="textStart"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/laranja"
+            app:strokeWidth="2dp" />
+
+        <!-- Botão: Vídeos -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVideos"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Vídeos"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconTint="@color/verde"
+            app:iconGravity="textStart"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/verde"
+            app:strokeWidth="2dp" />
+
+        <!-- Rodapé com efeito NEON -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtRodape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:text="Escolha o conteúdo"
+            android:textColor="#00FFCC"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:shadowColor="#00FFCC"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:letterSpacing="0.1" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

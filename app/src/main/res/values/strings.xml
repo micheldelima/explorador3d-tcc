@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Explorador 3D</string>
+    <string name="app_title">Explorador 3D</string>
+    <string name="bg_description">Imagem de fundo de realidade aumentada</string>
+    <string name="start_exploration">Iniciar Exploração</string>
+    <string name="about_app">Sobre o App</string>
+    <string name="settings">Configurações</string>
+
+    <string-array name="opcoes_idioma">
+        <item>Português</item>
+        <item>Inglês</item>
+    </string-array>
+
+    <string-array name="opcoes_fonte">
+        <item>Pequeno</item>
+        <item>Médio</item>
+        <item>Grande</item>
+    </string-array>
+
+</resources>
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisualizadorActivity">
+
+    <!-- 🔹 WebView ocupará toda a tela -->
+    <WebView
+        android:id="@+id/webViewAR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 🔹 Botões flutuantes sobre a câmera -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent">
+
+        <Button
+            android:id="@+id/btnOuvir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔊 Ouvir"
+            android:backgroundTint="@color/verde"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="➡ Próximo"
+            android:backgroundTint="@color/laranja"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfiguracoesActivity">
+
+    <!-- Fundo com imagem -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fundo_conf"
+        android:contentDescription="@string/bg_description" />
+
+    <!-- Camada escura translúcida -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título principal -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:shadowColor="#AA000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4" />
+
+            <!-- Subtítulo -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSubTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Configurações do Aplicativo"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:shadowColor="#88000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4" />
+
+            <!-- Label do idioma -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtIdiomaLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="monospace"
+                android:text="Idioma do aplicativo:"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <!-- Grupo de idiomas -->
+            <RadioGroup
+                android:id="@+id/radioGroupIdioma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <RadioButton
+                    android:id="@+id/rbPortugues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Português"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/verde" />
+
+                <RadioButton
+                    android:id="@+id/rbIngles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inglês"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="32dp"
+                    android:buttonTint="@color/azul" />
+            </RadioGroup>
+
+            <!-- Som/TTS -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchSom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ativar som e narração (TTS)"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tamanho da fonte -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtFonteLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="monospace"
+                android:text="Tamanho da fonte:"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/seekFonte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="40"
+                android:min="12"
+                android:progress="20"
+                android:layout_marginBottom="40dp" />
+
+            <!-- Botão salvar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Salvar configurações"
+                android:textColor="@android:color/white"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconGravity="textStart"
+                app:iconTint="@color/verde"
+                app:strokeColor="@color/verde"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

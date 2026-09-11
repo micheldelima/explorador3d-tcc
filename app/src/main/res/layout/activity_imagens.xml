@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImagensActivity">
+
+    <WebView
+        android:id="@+id/webViewARImagens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="#80000000">
+
+        <Button
+            android:id="@+id/btnOuvirImagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ouvir"
+            android:drawableLeft="@android:drawable/ic_btn_speak_now"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/azul" />
+
+        <Button
+            android:id="@+id/btnProximaImagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próxima"
+            android:layout_marginStart="16dp"
+            android:drawableLeft="@android:drawable/ic_media_next"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/laranja" />
+    </LinearLayout>
+</RelativeLayout>
